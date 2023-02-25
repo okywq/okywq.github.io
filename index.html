@@ -7,7 +7,10 @@
 	url[4]="https://okywq4.xyz";
 	i=Math.random() * url.length;
 	i=Math.floor(i);
-	str =url[i];
-	document.write("跳转中...若无法打开网页，请尝试多次刷新或尝试切换[手机网络或无线网络]");
-	window.location.href=str;
+	link =url[i];
+	str ="<a href='"+ url[i] +"'>";
+	document.write("跳转中...");
+	document.write(str+"若无法跳转，请手动点击此链接！</a><br>");
+	document.write("若无法打开网页，请尝试多次刷新或尝试切换[手机网络或无线网络]");
+	window.location.href=link;
 </script>
