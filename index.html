@@ -1,3 +1,208 @@
-<script>
-	window.location.href="https://ok.shsw.top";
-</script>
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<title>OK原味圈 OKYWQ - 官网</title>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="keywords" contect="OK原味圈,OKYWQ">
+		<meta name="description" contect="OK原味圈,OKYWQ">
+		<meta name="author" contect="OK原味圈">
+		<meta name="robots" contect= "all">
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				color:#4D5656;
+			}
+			body {
+				background-color: #ecf0f3;
+			}
+			.container {
+				width: 90%;
+				height: 100%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				z-index:1;
+				-webkit-transform: translate(-50%, -50%);
+				-moz-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				-o-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+			}
+			.content {
+				//width: 100%;
+				//height: 90%;
+				margin-top:20px;
+				background-color: #ecf0f3;
+				border-radius: 15px;
+				box-shadow: 5px 5px 10px #b1b4b6,-5px -5px 10px #ffffff;
+			}
+			.content section{
+				position: absolute;
+				opacity: 0;
+				transition: .4s ease-out;
+			}
+			.content section.active-section{
+				opacity: 1;
+			}
+			.main {
+				width: 100%;
+				height: 100%;
+				z-index:1;
+				display:inline-block;
+				position:relative;
+				overflow: hidden;
+				border-radius: 10px;
+			}
+			.bgt {
+				background-repeat: no-repeat;
+				background-size: cover;
+				width:100%;
+			}
+			.box{
+				margin-top:10px;
+				border-radius: 15px;
+				padding:10px;
+				margin-bottom:10px;
+				background: #ecf0f3;
+				box-shadow: inset 5px 5px 10px #b1b4b6,
+					inset -5px -5px 10px #ffffff;
+			}
+			#boxs{
+				margin:0px;
+				height: 100%;
+				overflow-x: hidden;
+				overflow-y: scroll;
+			}
+			#boxs::-webkit-scrollbar{
+				width: 5px;
+				height: 5px;
+			}
+			#boxs::-webkit-scrollbar-track{
+				border-radius: 12px;
+				background-color: #eee;
+			}
+			#boxs::-webkit-scrollbar-thumb{
+				border-radius: 12px;
+				background-color: #aaa;
+			}
+			.web{
+				width:90%;
+				height:20px;
+				text-align:center;
+				background: #fafafa 
+				repeating-linear-gradient(-45deg,#fff,#fff 1.125rem,transparent 1.125rem,transparent 2.25rem);
+				box-shadow:0 2px 5px rgba(0,0,0,.15);
+				margin:0 auto;
+				margin-top:0px;
+				margin-bottom:10px;
+				padding:10px;
+				border-radius:5px;
+				font-size:15px;
+				font-weight: bold;
+			}
+			.tips{
+				width:90%;
+				border-bottom-right-radius: 2px;
+				border-left: 4px solid #2ECC71;
+				border-top-right-radius: 2px;
+				margin: 0 auto;
+				//text-align:center;
+				padding: 3px;
+				position: relative;
+				background-color: #f8f8f8;
+				font-size:12px;
+			}
+			.A {
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container"><!-- 主体开始 -->
+			<div class="content"><!-- 内容开始 -->
+				<section class="home-me-section active-section"><!-- 首页开始 -->
+					<div class="main"><!-- 站点内容开始 -->
+					
+						<div onclick="setshare()">
+							<img src="bgo.jpg" class="bgt" />
+						</div>
+						
+						<div class="box">
+							<a href="https://oss.dclouds.cloud/okywq.apk" target="_blank" class="A">
+							<div id="boxs">
+								<div class="track-list"><!-- 时间轴开始 -->
+									<ul>
+										<div class="web">安卓免费下载</div>
+										<div class="tips">【安卓版本】永久稳定/建议优先使用。</div>
+										<div class="tips">【提示】安卓下载后请在下载管理、文件管理或者通知栏里面找APK安装包！安装包解析失败请重新下载！</div>
+									</ul>
+								</div><!-- 时间轴结束 -->
+							</div>
+							</a>
+						</div>
+						
+						<div class="box">
+							<div id="boxs">
+								<div class="track-list"><!-- 时间轴开始 -->
+									<ul>
+										<a class="A"><div class="web">提示：先删除再安装 Safari浏览器打开本站</div></a>
+										<!-- <a href="https://app.xfenfa.cn/ZoO3" target="_blank" class="A" onclick="ios()"><div class="web">苹果免费下载点A（企业签）</div></a>
+										<a href="https://jzyx.ink/TMnVky" target="_blank" class="A" onclick="ios()"><div class="web">苹果免费下载点C（企业签）</div></a>
+										<div class="tips">总有人说打不开，3个下载点总有一个能打开吧！！！</div> -->
+										<a href="itms-services://?action=download-manifest&url=https://oss.dclouds.cloud/okywq.plist" target="_blank" class="A" onclick="ios()"><div class="web">1. 苹果免费下载点（企业签）</div></a>
+										<a href="/book.html" target="_blank" class="A"><div class="web">2. 永久防失联书签【iOS推荐安装】</div></a>
+										<a href="https://oss.dclouds.cloud/embedded.mobileprovision" target="_blank" class="A"><div class="web">3. 信任证书</div></a>
+										<div class="tips">【企业签】优点：免费下载/缺点：易掉签，掉签后需重装（务必保存本页防止失联）/推荐苹果新用户安装。</div>
+										<div class="tips">【提示】苹果请用Safari浏览器打开本站，下载后需要信任应用，请前往“设置”、“通用”、“VPN与设备管理”、“信任应用”。</div>
+									</ul>
+								</div><!-- 时间轴结束 -->
+							</div>
+						</div>
+						
+						<div class="box">
+							<a href="https://shop.zlka.vip/details/72E76382" target="_blank" class="A">
+							<div id="boxs">
+								<div class="track-list"><!-- 时间轴开始 -->
+									<ul>
+										<div class="web">苹果付费安装（超级签）</div>
+										<div class="tips">【超级签】优点：稳定不易掉签，专属客服对接安装/推荐苹果老用户安装。</div>
+									</ul>
+								</div><!-- 时间轴结束 -->
+							</div>
+							</a>
+						</div>
+						
+						<div class="box">
+							<div id="boxs">
+								<div class="track-list"><!-- 时间轴开始 -->
+									<ul>
+										<div class="tips">【提示】苹果如果无法安装，请前往“设置”、“Safari浏览器”、“请求桌面网站”、“所有网站”、“关闭”后刷新页面重新下载！</div>
+									</ul>
+								</div><!-- 时间轴结束 -->
+							</div>
+						</div>
+						
+					</div><!-- 站点内容结束 -->
+				</section><!-- 首页结束 -->
+			</div><!-- 内容结束 -->
+		</div><!-- 主体结束 -->
+
+		<script>
+		    function setshare(){
+			let txt = "https://okywq.github.io";
+				let txa = document.createElement('textarea')
+				txa.value = txt
+				document.body.appendChild(txa);
+				txa.select(); // 选择对象;
+				document.execCommand("Copy"); // 执行浏览器复制命令
+				// 复制成功提示;
+				alert('截图保存网址！防失联！\nhttps://okywq.github.io');
+				txa.remove()
+		    }
+			function ios(){
+			alert('提示：iOS请务必先卸载后安装！');
+		    }
+		</script>
+	</body>
+</html>
