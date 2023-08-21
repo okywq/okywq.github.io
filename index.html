@@ -193,56 +193,52 @@
 			</div><!-- 内容结束 -->
 		</div><!-- 主体结束 -->
 
-	<script>
-	var ua = navigator.userAgent.toLowerCase();
-	var tick = document.getElementById("tick");
-	var img = document.getElementById("img");
-
-	if (ua.match(/android/i) == "android") {
-	    if (ua.match(/twitter/i) == "twitter") {
-	    tick.innerText = "设备：安卓 | 环境：推特 | 无法下载？截图扫描上方二维码/请用其它浏览器打开";
-	    
-	} else {
-	    tick.innerText = "当前设备：安卓Android";
-	    document.getElementById("android_show").style.display = "block";
-	}
-                
-            } else if (ua.match(/iphone/i) == "iphone" || ua.match(/iphone/i) == "ipad") {
-                if (ua.match(/MicroMessenger/i) == "micromessenger") {
-                    tick.innerText = "设备：苹果iOS | 环境：微信 | 请用Safari浏览器打开";
-                    document.getElementById("wxtips_show").style.display = "block";
-                    
-                } else if (ua.match(/twitter/i) == "twitter") {
-                    tick.innerText = "设备：苹果iOS | 环境：推特 | 无法下载？截图扫描上方二维码/请用Safari浏览器打开";
-                    
-                } else {
-                    tick.innerText = "当前设备：苹果iOS";
-                    document.getElementById("ios_show").style.display = "block";
-                }
-            } else {
-                document.getElementById("ios_show").style.display = "block";
-                document.getElementById("android_show").style.display = "block";
-            }
-    		
+		<script>
+			var ua = navigator.userAgent.toLowerCase();
+			var tick = document.getElementById("tick");
+			var img = document.getElementById("img");
 		
-	    function ios(){
-		alert('提示：iOS请务必先卸载后安装！');
-	    }
-	    function android(){
-		test.hello('https://oss.dclouds.cloud/okywq.apk');
-	    }
+			if (ua.match(/android/i) == "android") {
+			    	if (ua.match(/twitter/i) == "twitter") {
+				    tick.innerText = "设备：安卓 | 环境：推特 | 无法下载？截图扫描上方二维码/请用其它浏览器打开";
+				} else {
+				    tick.innerText = "当前设备：安卓Android";
+				    document.getElementById("android_show").style.display = "block";
+				}
+		        } else if (ua.match(/iphone/i) == "iphone" || ua.match(/iphone/i) == "ipad") {
+		                if (ua.match(/MicroMessenger/i) == "micromessenger") {
+		                    tick.innerText = "设备：苹果iOS | 环境：微信 | 请用Safari浏览器打开";
+		                    document.getElementById("wxtips_show").style.display = "block";
+		                } else if (ua.match(/twitter/i) == "twitter") {
+		                    tick.innerText = "设备：苹果iOS | 环境：推特 | 无法下载？截图扫描上方二维码/请用Safari浏览器打开";
+		                } else {
+		                    tick.innerText = "当前设备：苹果iOS";
+		                    document.getElementById("ios_show").style.display = "block";
+		                }
+			} else {
+				document.getElementById("ios_show").style.display = "block";
+				document.getElementById("android_show").style.display = "block";
+			}
+		    		
+				
+			function ios(){
+				alert('提示：iOS请务必先卸载后安装！');
+			}
+			function android(){
+				test.hello('https://oss.dclouds.cloud/okywq.apk');
+			}
 		</script>
 		
 		<script src="https://oss.dclouds.cloud/github/layui/layui.js"></script>
 		<script>
 			layui.use(['carousel'],function(){
 				var carousel = layui.carousel;
-				carousel.render({
-    				elem: '#ID-image',
-    				width: 300,
-    				height: 649,
-    				anim:'fade',
-    				interval: 2000
+					carousel.render({
+					elem: '#ID-image',
+					width: 300,
+					height: 649,
+					anim:'fade',
+					interval: 2000
 				});
 			});
 		</script>
