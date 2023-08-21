@@ -7,6 +7,8 @@
 		<meta name="description" contect="OK原味圈,OKYWQ">
 		<meta name="author" contect="OK原味圈">
 		<meta name="robots" contect= "all">
+		<link href="https://oss.dclouds.cloud/github/favicon.ico" rel="icon">
+		<link href="https://oss.dclouds.cloud/github/layui/css/layui.css" rel="stylesheet">
 		<style type="text/css">
 			* {
 				margin: 0;
@@ -124,16 +126,20 @@
 				<section class="home-me-section active-section"><!-- 首页开始 -->
 					<div class="main"><!-- 站点内容开始 -->
 					
-						<div onclick="setshare()">
-							<img src="bgo.jpg" class="bgt" />
-						</div>
+						<img src="https://oss.dclouds.cloud/github/okywqgithub.jpg" class="bgt" />
+						<div class="box">
+							<div id="boxs">
+						        <div class="tips" id="tick">未检测到使用的设备类型</div>
+					        </div>
+					    </div>
 						
+						<div id="android_show" style="display:none;">
 						<div class="box">
 							<div id="boxs">
 								<div class="track-list"><!-- 时间轴开始 -->
 									<ul>
 										<a href="https://oss.dclouds.cloud/okywq.apk" target="_blank" class="A"><div class="web">1. 安卓免费下载</div></a>
-										<a href="https://oss.dclouds.cloud/%E9%98%B2%E5%A4%B1%E8%81%94%E6%8E%A8%E8%8D%90%E5%AE%89%E8%A3%85.apk" target="_blank" class="A"><div class="web">2. 永久防失联书签【安卓推荐安装】</div></a>
+										<a href="https://oss.dclouds.cloud/%E9%98%B2%E5%A4%B1%E8%81%94%E6%8E%A8%E8%8D%90%E5%AE%89%E8%A3%85.apk" target="_blank" class="A"><div class="web">2. 永久防失联书签【推荐安装】</div></a>
 										<div class="tips">【安卓版本】永久稳定/建议优先使用。</div>
 										<div class="tips">【提示】安卓下载后请在下载管理、文件管理或者通知栏里面找APK安装包！安装包解析失败请重新下载！</div>
 									</ul>
@@ -141,42 +147,44 @@
 							</div>
 							</a>
 						</div>
+						</div>
 						
+						<div id="ios_show" style="display:none;">
 						<div class="box">
 							<div id="boxs">
 								<div class="track-list"><!-- 时间轴开始 -->
 									<ul>
-										<a class="A"><div class="web">提示：先删除再安装 Safari浏览器打开本站</div></a>
-										<a href="itms-services://?action=download-manifest&url=https://oss.dclouds.cloud/okywq.plist" target="_blank" class="A" onclick="ios()"><div class="web">1. 苹果免费下载点（企业签）</div></a>
-										<a href="/book.html" target="_blank" class="A"><div class="web">2. 永久防失联书签【iOS推荐安装】</div></a>
+										<a href="itms-services://?action=download-manifest&url=https://oss.dclouds.cloud/okywq.plist" target="_blank" class="A" onclick="ios()"><div class="web">1. 苹果免费下载</div></a>
+										<a href="/book.html" target="_blank" class="A"><div class="web">2. 永久防失联书签【推荐安装】</div></a>
 										<a href="https://oss.dclouds.cloud/embedded.mobileprovision" target="_blank" class="A"><div class="web">3. 信任证书</div></a>
-										<div class="tips">【企业签】优点：免费下载/缺点：易掉签，掉签后需重装（务必保存本页防止失联）/推荐苹果新用户安装。</div>
-										<div class="tips">【提示】苹果请用Safari浏览器打开本站，下载后需要信任应用，请前往“设置”、“通用”、“VPN与设备管理”、“信任应用”。</div>
+										<div class="tips">【企业签】易掉签，掉签后需重装（务必保存本页防止失联）</div>
+										<div class="tips">【提示】请用Safari浏览器打开本站，下载后需要信任应用，请前往“设置”、“通用”、“VPN与设备管理”、“信任应用”。</div>
+										<div class="tips">【提示】如果无法安装，请前往“设置”、“Safari浏览器”、“请求桌面网站”、“所有网站”、“关闭”后刷新页面重新下载！</div>
 									</ul>
 								</div><!-- 时间轴结束 -->
 							</div>
 						</div>
+						</div>
 						
-						<div class="box">
-							<a href="https://shop.zlka.vip/details/72E76382" target="_blank" class="A">
-							<div id="boxs">
-								<div class="track-list"><!-- 时间轴开始 -->
-									<ul>
-										<div class="web">苹果付费安装（超级签）</div>
-										<div class="tips">【超级签】优点：稳定不易掉签，专属客服对接安装/推荐苹果老用户安装。</div>
-									</ul>
-								</div><!-- 时间轴结束 -->
-							</div>
-							</a>
+						<div id="wxtips_show" style="display:none;">
+    						<div class="box">
+    							<div id="boxs">
+    								<img src="https://oss.dclouds.cloud/github/wxtips.png" width="100%" height="100%">
+    							</div>
+    						</div>
 						</div>
 						
 						<div class="box">
 							<div id="boxs">
-								<div class="track-list"><!-- 时间轴开始 -->
-									<ul>
-										<div class="tips">【提示】苹果如果无法安装，请前往“设置”、“Safari浏览器”、“请求桌面网站”、“所有网站”、“关闭”后刷新页面重新下载！</div>
-									</ul>
-								</div><!-- 时间轴结束 -->
+								<div class="layui-carousel" id="ID-image" style="margin:auto;border-radius: 25px;">
+									<div carousel-item style="border-radius: 25px;">
+										<div><img src="https://oss.dclouds.cloud/github/1.jpg" width="100%" height="100%"></div>
+										<div><img src="https://oss.dclouds.cloud/github/2.jpg" width="100%" height="100%"></div>
+										<div><img src="https://oss.dclouds.cloud/github/3.jpg" width="100%" height="100%"></div>
+										<div><img src="https://oss.dclouds.cloud/github/4.jpg" width="100%" height="100%"></div>
+										<div><img src="https://oss.dclouds.cloud/github/5.jpg" width="100%" height="100%"></div>
+									</div>
+								</div>
 							</div>
 						</div>
 						
@@ -186,20 +194,71 @@
 		</div><!-- 主体结束 -->
 
 		<script>
-		    function setshare(){
-			let txt = "https://okywq.github.io";
-				let txa = document.createElement('textarea')
-				txa.value = txt
-				document.body.appendChild(txa);
-				txa.select(); // 选择对象;
-				document.execCommand("Copy"); // 执行浏览器复制命令
-				// 复制成功提示;
-				alert('截图保存网址！防失联！\nhttps://okywq.github.io');
-				txa.remove()
-		    }
+    		var ua = navigator.userAgent.toLowerCase();
+            var tick = document.getElementById("tick");
+            var img = document.getElementById("img");
+
+    		if (ua.match(/android/i) == "android") {
+    		    if (ua.match(/twitter/i) == "twitter") {
+                    tick.innerText = "设备：安卓 | 环境：推特 | 无法下载？请用其它浏览器打开";
+                    
+                } else {
+                    tick.innerText = "当前设备：安卓Android";
+                    document.getElementById("android_show").style.display = "block";
+                }
+                
+            } else if (ua.match(/iphone/i) == "iphone" || ua.match(/iphone/i) == "ipad") {
+                if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                    tick.innerText = "设备：苹果iOS | 环境：微信 | 请用Safari浏览器打开";
+                    document.getElementById("wxtips_show").style.display = "block";
+                    
+                } else if (ua.match(/twitter/i) == "twitter") {
+                    tick.innerText = "设备：苹果iOS | 环境：推特 | 无法下载？请用Safari浏览器打开";
+                    
+                } else {
+                    tick.innerText = "当前设备：苹果iOS";
+                    document.getElementById("ios_show").style.display = "block";
+                }
+            } else {
+                document.getElementById("ios_show").style.display = "block";
+                document.getElementById("android_show").style.display = "block";
+            }
+    		
+		
+		
+		
+		
+// 		    function setshare(){
+// 			let txt = "https://okywq.github.io";
+// 				let txa = document.createElement('textarea')
+// 				txa.value = txt
+// 				document.body.appendChild(txa);
+// 				txa.select(); // 选择对象;
+// 				document.execCommand("Copy"); // 执行浏览器复制命令
+// 				// 复制成功提示;
+// 				alert('截图保存网址！防失联！\nhttps://okywq.github.io');
+// 				txa.remove()
+// 		    }
 			function ios(){
-			alert('提示：iOS请务必先卸载后安装！');
+			    alert('提示：iOS请务必先卸载后安装！');
 		    }
+		    function android(){
+		        test.hello('https://oss.dclouds.cloud/okywq.apk');
+		    }
+		</script>
+		
+		<script src="https://oss.dclouds.cloud/github/layui/layui.js"></script>
+		<script>
+			layui.use(['carousel'],function(){
+				var carousel = layui.carousel;
+				carousel.render({
+    				elem: '#ID-image',
+    				width: 300,
+    				height: 533,
+    				anim:'fade',
+    				interval: 2000
+				});
+			});
 		</script>
 	</body>
 </html>
